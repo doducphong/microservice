@@ -16,3 +16,7 @@ spring:
 
 jwt:
   signerKey: ${SecretKey}
+
+app:
+  services:
+    profile: http://localhost:8081/profile

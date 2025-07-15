@@ -29,10 +29,10 @@ public class UserProfileService {
         return userProfileMapper.toUserProfileResponse(userProfile);
     }
 
-    public UserProfileResponse getProfile(UUID id) {
+    public UserProfile getProfile(UUID id) {
         UserProfile userProfile = userProfileRepository.findById(id)
                 .orElseThrow(() ->  new RuntimeException("UserProfile not found"));
 
-        return userProfileMapper.toUserProfileResponse(userProfile);
+        return userProfile;
     }
 }

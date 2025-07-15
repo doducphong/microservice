@@ -24,7 +24,7 @@ public class UserProfileController {
     }
 
     @GetMapping("/users/{profileId}")
-    UserProfileResponse getProfile(@PathVariable UUID profileId) {
+    UserProfile getProfile(@PathVariable UUID profileId) {
         return userProfileService.getProfile(profileId);
     }
 }
